@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.epitome.controller.SignUp"
+    android:gravity="center">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
+
+        <RelativeLayout
+            android:id="@+id/scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtappname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Epitome"
+                android:textSize="50dp"
+                android:gravity="center"
+                android:textAppearance="@style/AppTheme"
+                android:typeface="monospace"/>
+
+
+            <EditText
+                android:id="@+id/editFirstname"
+                android:layout_below="@id/txtappname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Firstname"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <EditText
+                android:id="@+id/editLastname"
+                android:layout_below="@id/editFirstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Lastname"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_below="@id/editLastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <EditText
+                android:id="@+id/editContact"
+                android:layout_below="@id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contact "
+                android:inputType="phone"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_below="@id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="36dp" />
+
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editContact"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="36dp"
+                android:checkedButton="@id/radioButton1"
+                android:orientation="horizontal"
+                >
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:checked="true"
+                   />
+
+
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/radioGroup1"
+                    android:layout_below="@+id/radioGroup1"
+                    android:text="Female" />
+
+
+            </RadioGroup>
+
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_below="@id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textWebPassword"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/txtAlredyAccount"
+                android:layout_below="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Alredy have a account? Login"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:textAppearance="@style/AppTheme"
+                android:typeface="monospace"/>
+
+
+
+            <Button
+                android:id="@+id/btnSignup"
+                android:layout_below="@id/txtAlredyAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_centerInParent="true"
+                android:text="Sign Up"
+                android:background="#808080"
+                android:layout_marginTop="20dp"
+                />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
